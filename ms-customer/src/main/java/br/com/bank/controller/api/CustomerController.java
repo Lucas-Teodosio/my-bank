@@ -20,8 +20,8 @@ public class CustomerController {
         createCustomer(customerRequest);
     }
 
-    @PostMapping("/request-card/{document}")
-    public String requestCard(@PathVariable String document)   {
+    @PostMapping("/request-card")
+    public String requestCard(@RequestParam String document)   {
             return this.customerUseCase.sendRequest(document);
     }
     
@@ -29,6 +29,7 @@ public class CustomerController {
         this.customerUseCase.createCustomer(Customer.builder()
                         .email(customerRequest.getEmail())
                         .document(customerRequest.getDocument())
+                        .requests(0)
                 .build());
     }
 }

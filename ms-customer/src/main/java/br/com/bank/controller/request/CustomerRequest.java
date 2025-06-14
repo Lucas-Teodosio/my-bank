@@ -8,8 +8,10 @@ import lombok.*;
 @Setter
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 public class CustomerRequest {
 
-    private final String email;
-    private final String document;
+    private String email;
+    private String document;
+    private Integer requests;
 }

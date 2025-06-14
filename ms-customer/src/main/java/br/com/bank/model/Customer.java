@@ -15,4 +15,6 @@ public class Customer {
     private Long id;
     private String email;
     private String document;
+    @Column(columnDefinition = "integer default 0")
+    private Integer requests = 0;
 }
