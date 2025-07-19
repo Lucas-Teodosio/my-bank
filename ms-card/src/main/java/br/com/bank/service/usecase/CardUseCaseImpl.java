@@ -3,13 +3,13 @@ package br.com.bank.service.usecase;
 import br.com.bank.external.CardMessage;
 import br.com.bank.model.Customer;
 import br.com.bank.repository.CardRepository;
-import br.com.bank.service.CustomerUseCase;
+import br.com.bank.service.CardUseCase;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor
-public class CustomerUseCaseImpl implements CustomerUseCase {
+public class CardUseCaseImpl implements CardUseCase {
 
     private final CardMessage cardMessage;
     private final CardRepository cardRepository;

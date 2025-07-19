@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 @AllArgsConstructor
 @Slf4j
-public class ProducerMessageImpl implements ProducerMessage {
+public class CardMessageImpl implements CardMessage {
 
     private final RabbitTemplate rabbitTemplate;
 

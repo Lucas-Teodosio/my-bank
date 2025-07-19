@@ -1,12 +1,13 @@
 package br.com.bank.controller.request;
 
 
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 @Setter
-public class CustomerRequest {
+public class CardRequest {
 
-    private String email;
-    private  String document;
+    private String brand;
+    private  String income;
 }

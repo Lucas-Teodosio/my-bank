@@ -1,4 +1,9 @@
 package br.com.bank.model;
 
-public class CardBrand {
+
+public enum CardBrand {
+    VISA,
+    MASTERCARD,
+    ELO,
+    HIPERCARD
 }

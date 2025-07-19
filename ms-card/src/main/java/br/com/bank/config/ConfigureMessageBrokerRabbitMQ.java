@@ -21,6 +21,19 @@ public class ConfigureMessageBrokerRabbitMQ {
     private DirectExchange checkRequestCardExchange() {
         return new DirectExchange("checkValidationRequestCardExchange");
     }
+
+    private DirectExchange cardDecisionExchange() {
+        return new DirectExchange("cardDecisionExchange");
+    }
+
+    private Queue cardApprovedQueue() {
+        return new Queue("cardApproved", true, false, true);
+    }
+
+    private Queue cardDeniedQueue() {
+        return new Queue("cardDenied", true, false, true);
+    }
+
     private Binding allBinding(Queue queue, DirectExchange exchange) {
         return new Binding(queue.getName(), Binding.DestinationType.QUEUE,
                 exchange.getName(), queue.getName(),null);
